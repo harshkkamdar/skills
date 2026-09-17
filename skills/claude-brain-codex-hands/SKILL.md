@@ -1,5 +1,5 @@
 ---
-name: orchestrating-codex
+name: claude-brain-codex-hands
 description: Brain-and-hands split, Claude diagnosing and briefing while OpenAI Codex CLI lanes type. Use when the user asks for Codex as the implementer or to orchestrate or fan out Codex agents; when a large job that can be specified exactly (a review list, audit, migration or cleanup across dozens of files) should save Claude tokens; or when a checkout already holds `.context/codex/`. Not for a handful of lines or taste-led design work.
 ---
 

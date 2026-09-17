@@ -6,7 +6,7 @@ Agent skills by [@harshkkamdar](https://github.com/harshkkamdar). Works with Cla
 npx skills add harshkkamdar/skills
 ```
 
-## orchestrating-codex
+## claude-brain-codex-hands
 
 Run a big, many-file job with **Claude as the brain and OpenAI Codex CLI sessions as the hands**.
 
@@ -25,7 +25,7 @@ What is in it:
 Requires the [Codex CLI](https://github.com/openai/codex), installed and logged in.
 
 ```bash
-npx skills add harshkkamdar/skills --skill orchestrating-codex
+npx skills add harshkkamdar/skills --skill claude-brain-codex-hands
 ```
 
 Then ask: "use Codex as the hands for this, you be the brain", and hand over the review list.
