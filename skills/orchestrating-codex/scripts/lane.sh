@@ -29,6 +29,7 @@ if [ "${1:-}" = "--next" ] && [ -n "${2:-}" ]; then next_tag "$2"; echo; exit 0;
 LANE="$1"; BRIEF="$2"; FRESH=0
 [ "${3:-}" = "--fresh" ] && FRESH=1
 [ -f "$BRIEF" ] || { echo "brief not found: $BRIEF" >&2; exit 2; }
+BRIEF="$(cd "$(dirname "$BRIEF")" && pwd)/$(basename "$BRIEF")"   # absolute before we cd to the root
 command -v codex >/dev/null 2>&1 || { echo "codex CLI not found" >&2; exit 2; }
 mkdir -p "$DIR/out" "$DIR/notes"; touch "$DIR/sessions.txt"
 

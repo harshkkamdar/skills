@@ -28,13 +28,9 @@ Look for what earlier sessions left: a project handoff doc or memory note about 
   - the fixed report format (`FILES / TESTS / CHECKS / NOTES`), which is what lets you read a report in seconds.
 - **Network.** Lanes run with network access on by default so installs and test tooling work. Set `CODEX_NETWORK=false` if the project should not have it. `CODEX_MODEL` and `CODEX_SANDBOX` override the model and sandbox mode.
 
-## Why one checkout
-
-A worktree per lane sounds safer, but it multiplies installs, dev servers and merge reviews for no gain, since lanes are already kept apart by file ownership. The costs of sharing are handled by three preamble rules: lanes never run git, never run the full build, never start a server.
-
 ## Threads
 
-- **Three to five tasks per thread**, corrections included. A thread resumed many times gets slower and vaguer as its context fills. For a new theme or a new job, keep the lane name and start a new thread: `lane.sh <lane> <brief> --fresh`.
+- A thread holds three to five tasks, corrections included; after that, `--fresh` with the same lane name.
 - Thread ids live in `.context/codex/sessions.txt` as `lane=id`; the last line for a lane wins. The id is the `thread_id` in the first line of each `--json` log.
 - If you ever call Codex by hand: every flag goes **before** `resume`. After the subcommand only a few (`-c`, `-m`, `-o`) are accepted; `-s` and `-C` are rejected.
 - `status.sh --usage` totals Codex tokens across the job. Quote it when the owner asks whether the split is saving anything.

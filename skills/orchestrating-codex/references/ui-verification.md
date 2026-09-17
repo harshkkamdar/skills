@@ -1,6 +1,6 @@
 # Verifying UI work
 
-Read this when the round changes anything a person looks at in a browser. If the output is static HTML or text, rendering it with the project's own code and grepping the result is the verification; none of the browser mechanics below apply. Codex cannot open a browser inside its sandbox, and even if it could, judging the result is the part of the job that stays with you.
+Read this when the round changes anything a person looks at in a browser. If the output is static HTML or text, rendering it with the project's own code and grepping the result verifies the markup; a layout complaint (heights, alignment, overflow) still needs the built file opened in a browser, which works from a `file://` URL. Codex cannot open a browser inside its sandbox, and even if it could, judging the result is the part of the job that stays with you.
 
 ## What to capture
 

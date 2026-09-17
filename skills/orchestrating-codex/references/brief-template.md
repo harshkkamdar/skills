@@ -20,7 +20,7 @@ a curl status, a test name>.
 
 ## <next id>. ...
 
-## N. Tests
+## Tests
 `<lint command>`, `<targeted test command>`. Update assertions that encoded the old
 behaviour; list them under NOTES.
 ```

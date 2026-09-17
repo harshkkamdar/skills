@@ -11,7 +11,7 @@ command -v codex >/dev/null 2>&1 || { echo "codex CLI not found. Install it and 
 echo "codex: $(codex --version 2>/dev/null)"
 
 mkdir -p "$DIR/briefs" "$DIR/out" "$DIR/notes"
-touch "$DIR/sessions.txt"
+touch "$DIR/sessions.txt" "$DIR/plans.txt"
 
 if [ ! -f "$DIR/preamble.md" ]; then
   cp "$SKILL_DIR/references/preamble-template.md" "$DIR/preamble.md"
